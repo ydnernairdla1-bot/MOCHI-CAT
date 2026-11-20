@@ -1,0 +1,6 @@
+{
+  "name": "Meong Lapar",
+  "description": "Game memberi makan kucing oren dengan ekspresi senang dan marah, pilihan level kesulitan, dan sistem skor tinggi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
