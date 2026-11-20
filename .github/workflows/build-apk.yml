@@ -19,15 +19,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
       - name: Siapkan file .env dari .env.example jika ada
         if: hashFiles('.env.example') != ''
         run: cp .env.example .env
 
-      - name: Beri izin eksekusi gradlew
-        run: chmod +x gradlew
-
       - name: Build Debug APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
